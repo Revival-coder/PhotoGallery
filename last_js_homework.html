@@ -15,7 +15,9 @@
         <div class="hero-info">
             <h1 class="hero-info-heading">Hello <br> I'm Anastasiia</h1>
             <p class="hero-info-subheading">I like to take pictures</p>
-            <a href="#" type="button" class="hero-info-button">Portfolio</a>
+            <a href="#" type="button" class="hero-info-button">Portfolio
+                <hr>
+            </a>
         </div>
         <div class="hero-img">
             <img
@@ -23,7 +25,7 @@
         </div>
 
     </section>
-    <!--End Hero Section1-->
+    <!--End Hero Section-->
 
     <!--About section-->
     <section id="about" class="about container">
@@ -89,10 +91,12 @@
                         <h3>This is I</h3>
                     </a>
                 </div>
-                <p id="mycomm">Here you can leave your comment, for this click the button on the right</p>
+                <p id="mycomm"><em>You can leave your comment, for this click the button on the right</em></p>
                 <button id="button-1" class="button">
                     <i class="fa fa-credit-card"></i>
-                    <span>Write</span>
+                    <span><strong>
+                            Write
+                        </strong></span>
                 </button>
             </div>
         </div>
@@ -101,7 +105,7 @@
     <!--Footer section-->
     <footer id="footer" class="footer container">
         <div class="footer-contact">
-            <h1 class="footer-contact-heading">Contact With Me</h1>
+            <h2 class="footer-contact-heading">Contact With Me</h2>
             <p class="footer-contact-info">Email: nshevchenko903@gmail.com</p>
             <p class="footer-contact-info">Mobile: +1-519-466-5703</p>
         </div>
@@ -131,12 +135,17 @@
         function changeText() {
             let text = prompt("Write something");
             let heading = document.getElementById("mycomm");
-            heading.innerHTML = text;
+            let text2 = text.length;
+            if (text2 > 0) {
+                heading.innerHTML = text;
+            }
+            else {
+                heading.innerHTML = "<em> You can leave your comment, for this click the button on the right </em>";
+            }
         }
 
         let changeButton = document.querySelector("button");
         changeButton.addEventListener("click", changeText);
     </script>
 </body>
-
 </html>
